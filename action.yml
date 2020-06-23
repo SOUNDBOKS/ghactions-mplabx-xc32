@@ -1,0 +1,21 @@
+name: "Build with MPLabX and XC32"
+description: "This action builds an MPLABX/xc32/Harmony project in a Linux container."
+branding:
+  icon: wind
+  color: blue
+
+inputs:
+  project:
+    description: Project folder location
+    required: true
+  configuration:
+    description: Configuration to build
+    required: true
+    default: "default"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.project }}
+    - ${{ inputs.configuration }}
