@@ -1,8 +1,8 @@
 name: "Build with MPLabX and XC32"
 description: "This action builds an MPLABX/xc32/Harmony project in a Linux container."
 branding:
-  icon: wind
-  color: blue
+  icon: speaker
+  color: gray-dark
 
 inputs:
   project:
