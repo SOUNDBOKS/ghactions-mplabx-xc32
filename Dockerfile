@@ -16,7 +16,7 @@ RUN wget -nv -O /tmp/mplabx http://ww1.microchip.com/downloads/en/DeviceDoc/MPLA
   sudo ./mplabx --nox11 -- --unattendedmodeui none --mode unattended --ipe 0 --8bitmcu 0 --16bitmcu 0 --othermcu 0 --collectInfo 0 --installdir /opt/mplabx && \
   rm mplabx
 
-
 COPY build.sh /build.sh
+RUN chmod +x /build.sh
 
 ENTRYPOINT [ "/build.sh" ]
