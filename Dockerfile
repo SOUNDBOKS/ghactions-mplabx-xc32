@@ -13,7 +13,7 @@ RUN wget -nv -O /tmp/harmony http://ww1.microchip.com/downloads/en/DeviceDoc/har
 RUN wget -nv -O /tmp/mplabx http://ww1.microchip.com/downloads/en/DeviceDoc/MPLABX-v5.40-linux-installer.tar &&\
   cd /tmp && tar -xf /tmp/mplabx && rm /tmp/mplabx && \
   mv MPLAB*-linux-installer.sh mplabx && \
-  sudo ./mplabx --nox11 -- --unattendedmodeui none --mode unattended --ipe 0 --collectInfo 0 --installdir /opt/mplabx && \
+  sudo ./mplabx --nox11 -- --unattendedmodeui none --mode unattended --ipe 0 --8bitmcu 0 --16bitmcu 0 --othermcu 0 --collectInfo 0 --installdir /opt/mplabx && \
   rm mplabx
 
 
