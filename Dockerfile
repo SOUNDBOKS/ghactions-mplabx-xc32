@@ -5,7 +5,7 @@ RUN dpkg --add-architecture i386 && apt-get update && \
   rm -rf /var/lib/apt/lists/*
 RUN wget -nv -O /tmp/xc32 http://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v2.40-full-install-linux-installer.run && \
   sudo chmod +x /tmp/xc32 &&  \
-  /tmp/xc32 --mode unattended --unattendedmodeui none --netservername localhost --LicenseType FreeMode --prefix /opt/microchip/xc32/v2.40 && \
+  /tmp/xc32 --mode unattended --unattendedmodeui none --netservername localhost --LicenseType FreeMode --prefix /opt/microchip/xc32/v2.50 && \
   rm /tmp/xc32
 RUN wget -nv -O /tmp/harmony http://ww1.microchip.com/downloads/en/DeviceDoc/harmony_v2_02_00b_linux_installer.run && \
   sudo chmod +x /tmp/harmony && \
