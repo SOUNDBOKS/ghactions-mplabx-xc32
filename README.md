@@ -5,7 +5,7 @@ This action will build a MPLAB X project.
 It runs on Linux Ubuntu 18.04 and uses:
 
 - MPLAB 5.40
-- XC32 v2.40
+- XC32 v2.50
 - Harmony v2.02b
 
 ## Inputs
