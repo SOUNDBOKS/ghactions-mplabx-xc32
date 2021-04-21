@@ -22,3 +22,4 @@ runs:
   args:
     - ${{ inputs.project }}
     - ${{ inputs.configuration }}
+    - ${{ inputs.harmonyAppsFolder }}
