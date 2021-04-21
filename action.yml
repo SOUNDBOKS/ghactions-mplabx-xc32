@@ -12,6 +12,9 @@ inputs:
     description: Configuration to build
     required: true
     default: "default"
+  harmonyAppsFolder:
+    description: Harmony apps folder if you want to build inside apps for references
+    required: false
 
 runs:
   using: "docker"
