@@ -8,6 +8,7 @@ if [ "$3" -eq "0" ]
     PROJECT_PATH=/
 else
   PROJECT_PATH=$HARMONY_PATH/apps/$3
+  mkdir -p $PROJECT_PATH
   cp -r $1 $PROJECT_PATH/$1
   cp -r src $PROJECT_PATH/src
 fi
