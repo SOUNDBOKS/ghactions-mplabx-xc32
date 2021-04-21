@@ -12,6 +12,8 @@ else
   cp -r src $PROJECT_PATH/src
 fi
 
+ls $HARMONY_PATH/apps
+
 echo "Docker Container Building $1:$2"
 
 set -x -e
