@@ -9,7 +9,7 @@ RUN wget -nv -O /tmp/xc32 http://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v
   rm /tmp/xc32
 RUN wget -nv -O /tmp/harmony http://ww1.microchip.com/downloads/en/DeviceDoc/harmony_v2_02_00b_linux_installer.run && \
   sudo chmod +x /tmp/harmony && \
-  /tmp/harmony --mode unattended --unattendedmodeui none
+  /tmp/harmony --mode unattended --unattendedmodeui none --installdir /opt/harmony
 RUN wget -nv -O /tmp/mplabx http://ww1.microchip.com/downloads/en/DeviceDoc/MPLABX-v5.40-linux-installer.tar &&\
   cd /tmp && tar -xf /tmp/mplabx && rm /tmp/mplabx && \
   mv MPLAB*-linux-installer.sh mplabx && \
