@@ -2,6 +2,8 @@ FROM ubuntu:18.04
 
 RUN pwd
 
+RUN ls
+
 RUN dpkg --add-architecture i386 && apt-get update && \
   apt-get install -y libc6:i386 libx11-6:i386 libxext6:i386 libstdc++6:i386 libexpat1:i386 wget sudo make && \
   rm -rf /var/lib/apt/lists/*
@@ -20,8 +22,6 @@ RUN wget -nv -O /tmp/mplabx http://ww1.microchip.com/downloads/en/DeviceDoc/MPLA
 
 
 COPY build.sh /build.sh
-
-RUN ls
 
 RUN chmod +x /build.sh
 
