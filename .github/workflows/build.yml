@@ -20,7 +20,7 @@ jobs:
       - name: Login to GitHub Packages Docker Registry
         uses: docker/login-action@v1
         with:
-          registry: docker.pkg.github.com
+          registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
@@ -30,6 +30,6 @@ jobs:
           context: .
           pull: true
           push: true
-          cache-from: type=registry,ref=soundboks/ghactions-mplabx-xc32:latest
+          cache-from: type=registry,ref=ghcr.io/soundboks/ghactions-mplabx-xc32:latest
           cache-to: type=inline
-          tags: soundboks/ghactions-mplabx-xc32:latest
+          tags: ghcr.io/soundboks/ghactions-mplabx-xc32:latest
