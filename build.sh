@@ -22,4 +22,4 @@ set -x -e
 /opt/mplabx/mplab_platform/bin/prjMakefilesGenerator.sh $PROJECT_PATH/$1@$2 || exit 1
 make -C $PROJECT_PATH/$1 CONF=$2 build || exit 2
 
-cp -r $PROJECT_PATH/$1/ /github/workspace
+cp -r $PROJECT_PATH/$1/ /github/workspace/output
