@@ -20,7 +20,8 @@ The configuration of the project to build. Defaults to `default`.
 
 ## Outputs
 
-None.
+GH Outputs: None.
+The finished built files are moved to /github/workspace/output, so they can be used in later steps in the same run.
 
 ## Example usage
 
