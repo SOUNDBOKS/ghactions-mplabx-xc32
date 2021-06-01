@@ -2,11 +2,12 @@
 
 This action will build a MPLAB X project.
 
-It runs the base `build-deps` image from Docker and installs the following:
+It runs Ubuntu 18.04 and installs the following:
 
 - MPLAB 5.40
 - XC32 v2.50
 - Harmony v2.02b
+- Ruby (latest) + bundler
 
 ## Inputs
 
