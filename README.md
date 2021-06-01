@@ -52,6 +52,8 @@ jobs:
         with:
           project: firmware.X
           configuration: default
+          harmonyAppsFolder: some-firmware/firmware
+          ceedling: true
 ```
 
 ## Thanks to
