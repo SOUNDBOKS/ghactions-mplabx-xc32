@@ -2,7 +2,7 @@
 
 This action will build a MPLAB X project.
 
-It runs on Linux Ubuntu 18.04 and uses:
+It runs the base `build-deps` image from Docker and installs the following:
 
 - MPLAB 5.40
 - XC32 v2.50
@@ -17,6 +17,14 @@ It runs on Linux Ubuntu 18.04 and uses:
 ### `configuration`
 
 The configuration of the project to build. Defaults to `default`.
+
+### `harmonyAppsFolder`
+
+Harmony apps folder if you want to build inside apps for references
+
+### `ceedling`
+
+If you have Ceedling at the root level and you want to run tests
 
 ## Outputs
 
