@@ -6,7 +6,7 @@ MPLABX_ROOT=opt/mplabx/
 
 PROJECT_PATH=/
 
-if [ "$3" -eq "0" ]
+if [ -z "$3" ]
   then
     PROJECT_PATH=/
 else
@@ -18,7 +18,7 @@ fi
 
 ls $HARMONY_ROOT/apps
 
-if [ "$4" == "true" ]
+if [ "$4" = "true" ]
   then
     echo "Docker Container testing"
     cd $PROJECT_PATH
