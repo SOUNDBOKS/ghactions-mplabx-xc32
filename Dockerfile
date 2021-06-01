@@ -1,4 +1,4 @@
-FROM buildpack-deps
+FROM ubuntu:18.04
 
 RUN pwd
 
@@ -20,6 +20,7 @@ RUN wget -nv -O /tmp/mplabx http://ww1.microchip.com/downloads/en/DeviceDoc/MPLA
   sudo ./mplabx --nox11 -- --unattendedmodeui none --mode unattended --ipe 0 --8bitmcu 0 --16bitmcu 0 --othermcu 0 --collectInfo 0 --installdir /opt/mplabx && \
   rm mplabx
 
+RUN gem install bundler
 
 COPY entry.sh /entry.sh
 
