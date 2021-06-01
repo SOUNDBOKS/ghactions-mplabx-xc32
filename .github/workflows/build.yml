@@ -11,10 +11,6 @@ jobs:
       packages: write
       contents: read
     steps:
-
-      - name: Free up 24GB of disk space
-        run: sudo rm -rf /usr/share/dotnet
-
       - name: Check out the repo
         uses: actions/checkout@v2
 
