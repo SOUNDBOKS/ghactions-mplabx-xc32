@@ -1,5 +1,5 @@
-name: "Build with MPLabX and XC32"
-description: "This action builds an MPLABX/xc32/Harmony project in a Linux container."
+name: "Build with MPLAB X, XC32, Harmony and Ceedling"
+description: "This action builds an MPLABX/XC32/Harmony project in a Linux container and tests with Ceedling if enabled."
 branding:
   icon: speaker
   color: gray-dark
@@ -15,6 +15,10 @@ inputs:
   harmonyAppsFolder:
     description: Harmony apps folder if you want to build inside apps for references
     required: false
+  ceedling:
+    description: If you have Ceedling at the root level and you want to run tests
+    required: false
+    default: "false"
 
 runs:
   using: "docker"
@@ -23,3 +27,4 @@ runs:
     - ${{ inputs.project }}
     - ${{ inputs.configuration }}
     - ${{ inputs.harmonyAppsFolder }}
+    - ${{ inputs.ceedling }}

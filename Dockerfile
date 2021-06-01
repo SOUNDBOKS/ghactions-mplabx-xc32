@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM buildpack-deps
 
 RUN pwd
 
@@ -21,8 +21,8 @@ RUN wget -nv -O /tmp/mplabx http://ww1.microchip.com/downloads/en/DeviceDoc/MPLA
   rm mplabx
 
 
-COPY build.sh /build.sh
+COPY entry.sh /entry.sh
 
-RUN chmod +x /build.sh
+RUN chmod +x /entry.sh
 
-ENTRYPOINT [ "/build.sh" ]
+ENTRYPOINT [ "/entry.sh" ]

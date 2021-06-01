@@ -1,19 +1,28 @@
 #!/bin/sh
 
-HARMONY_PATH=/opt/harmony/v2_02_00b
-PROJECT_PATH=""
+HARMONY_ROOT=/opt/harmony/v2_02_00b/
+COMPILER_ROOT=/opt/xc32/v2.50/
+MPLABX_ROOT=opt/mplabx/
+
+PROJECT_PATH=/
 
 if [ "$3" -eq "0" ]
   then
     PROJECT_PATH=/
 else
-  PROJECT_PATH=$HARMONY_PATH/apps/$3
+  PROJECT_PATH=$HARMONY_ROOT/apps/$3
   mkdir -p $PROJECT_PATH
   cp -r $1 $PROJECT_PATH/$1
   cp -r src $PROJECT_PATH/src
 fi
 
-ls $HARMONY_PATH/apps
+ls $HARMONY_ROOT/apps
+
+if [ "$4" -eq "true" ]
+  echo "Docker Container testing"
+  bundle install
+  ceedling test:all
+fi
 
 echo "Docker Container Building $1:$2"
 
