@@ -19,9 +19,10 @@ fi
 ls $HARMONY_ROOT/apps
 
 if [ "$4" -eq "true" ]
-  echo "Docker Container testing"
-  bundle install
-  ceedling test:all
+  then
+    echo "Docker Container testing"
+    bundle install
+    ceedling test:all
 fi
 
 echo "Docker Container Building $1:$2"
