@@ -8,8 +8,9 @@ RUN dpkg --add-architecture i386 && apt-get update && \
   apt-get install -y libc6:i386 libx11-6:i386 libxext6:i386 libstdc++6:i386 libexpat1:i386 wget sudo make && \
   rm -rf /var/lib/apt/lists/*
 
-RUN sudo apt install ruby-full
-RUN gem install bundler
+RUN sudo apt-get update && \
+  sudo apt-get -y install ruby-full && \
+  gem install bundler
 
 RUN wget -nv -O /tmp/xc32 http://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v2.50-full-install-linux-installer.run && \
   sudo chmod +x /tmp/xc32 &&  \
