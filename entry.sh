@@ -21,6 +21,7 @@ ls $HARMONY_ROOT/apps
 if [ "$4" -eq "true" ]
   then
     echo "Docker Container testing"
+    cd $PROJECT_PATH/$1
     bundle install
     ceedling test:all
 fi
