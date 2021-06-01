@@ -15,6 +15,7 @@ inputs:
   harmonyAppsFolder:
     description: Harmony apps folder if you want to build inside apps for references
     required: false
+    default: ""
   ceedling:
     description: If you have Ceedling at the root level and you want to run tests
     required: false
