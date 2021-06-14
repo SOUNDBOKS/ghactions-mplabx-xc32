@@ -2,13 +2,13 @@
 
 HARMONY_ROOT=/opt/harmony/v2_02_00b/
 COMPILER_ROOT=/opt/xc32/v2.50/
-MPLABX_ROOT=opt/mplabx/
+MPLABX_ROOT=/opt/mplabx/
 
-PROJECT_PATH=/
+PROJECT_PATH=./
 
 if [ -z "$3" ]
   then
-    PROJECT_PATH=/
+    PROJECT_PATH=./
 else
   PROJECT_PATH=$HARMONY_ROOT/apps/$3
   mkdir -p $PROJECT_PATH
